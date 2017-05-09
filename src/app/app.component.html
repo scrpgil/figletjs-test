@@ -2,6 +2,11 @@
   {{title}}
 </h1>
 <input (keyup)="onKey($event)">
-<div *ngFor="let ascii of asciis;" class="asciiart">
+<div *ngFor="let ascii of asciis;let idx = index;" >
+<div class="fontname">
+{{fonts[idx]}}
+</div>
+<div class="asciiart">
 {{ascii}}
+</div>
 </div>
